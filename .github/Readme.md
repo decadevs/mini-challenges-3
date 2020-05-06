@@ -5,4 +5,3 @@
   - Solve all the problems in its corresponding index file.
 - Submit a PR against your branch name i.e Make sure your name and the target branch matches
 
-![PR](./PR.png)
