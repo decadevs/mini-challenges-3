@@ -1,6 +1,6 @@
 const listSorting = require(".");
 
-describe("Roman to Numerals solution", () => {
+describe("List Sorting test cases", () => {
   test("1 indexed", () => {
     expect(listSorting(5, [1, 2, 3, 4, 5])).toBe(4);
     expect(listSorting(5, [1, 2, 3, 4, 4, 4])).toBe(-1);
