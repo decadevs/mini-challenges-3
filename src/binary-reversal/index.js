@@ -3,6 +3,20 @@
  *
  *  * @param {string} value
  */
-function binaryReversal(value) {}
 
+/**Stepts to binary reversal
+ * convert the string value into binary using toString method
+ * pad the conversion to 8 bits
+ * reverse the 8-bit conversion using while loop
+ * use regex to match one or more of the binary group of 01k
+ * use parseInt to convert the reverse bits to Integer base 10
+ */
+function binaryReversal(value) {
+    let binaryValue=value.toString(2)
+    let paddedBinaryValue=binaryValue.padStart(8,0)
+    
+}
+
+
+console.log(binaryReversal(200))
 module.exports = binaryReversal;
