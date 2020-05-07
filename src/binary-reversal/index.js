@@ -22,7 +22,11 @@ function binaryReversal(value) {
         i-=1
     }
 
+    let reverseBinaryOnlyZeroOne=reversedBinaryValue.match(/[01]+/)[0]
     
+
+
+
     
 }
 
