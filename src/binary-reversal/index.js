@@ -9,18 +9,19 @@ function binaryReversal(value) {
   }
   let binary = value.toString(2);
   binary = binary.split("");
-  var diff = binary.length;
-  if (binary.length < 8) {
-    for (let i = 0; i < 8- diff; i++) {
+  
+  if ((binary.length) % 8 !=0) 
+  {
+    var diff = binary.length % 8;
+    for (let i = 0; i < 8 - diff; i++) {
       binary.unshift("0");
     }
   }
   binary = binary.reverse(); 
   binary = binary.join("");
   let decimal = parseInt(binary,2);
-
-  console.log(decimal);
+  decimal= decimal.toString();
     return decimal;
+
 }
-binaryReversal(111);
 module.exports = binaryReversal;
