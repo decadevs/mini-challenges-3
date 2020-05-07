@@ -24,12 +24,10 @@ function binaryReversal(value) {
 
     let reverseBinaryOnlyZeroOne=reversedBinaryValue.match(/[01]+/)[0]
     
+    let integerOfReversedBinaryZeroOne=parseInt(reverseBinaryOnlyZeroOne,2)
 
-
-
+    return integerOfReversedBinaryZeroOne
     
 }
 
-
-console.log(binaryReversal(200))
 module.exports = binaryReversal;
