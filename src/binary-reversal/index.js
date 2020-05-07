@@ -15,6 +15,15 @@ function binaryReversal(value) {
     let binaryValue=value.toString(2)
     let paddedBinaryValue=binaryValue.padStart(8,0)
     
+    let i=paddedBinaryValue.length
+    let reversedBinaryValue=""
+    while(i>=0){
+        reversedBinaryValue+=paddedBinaryValue[i]
+        i-=1
+    }
+
+    
+    
 }
 
 
