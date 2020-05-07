@@ -11,14 +11,28 @@
 */
 
 function listSorting(needle, haystack) {
+    let positionFound = "";
     //return -1 if for a single dimensional array with length of 0 element
     if(haystack.length===0){
         return -1
     }
 
+
     if(haystack[0].constructor===Array){
-        
+        for(let i=0;i<haystack.length;i++){
+            for(let j=0;j<haystack[i].length;j++){
+                if(haystack[i][j]===needle){
+                    positionFound=[i,j]
+                }
+            }
+        }
+
+        if(positionFound===""){
+            return -1
+        }
     }
+
+    
 
 }
 
