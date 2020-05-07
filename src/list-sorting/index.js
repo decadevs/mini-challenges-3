@@ -11,8 +11,13 @@
 */
 
 function listSorting(needle, haystack) {
+    //return -1 if for a single dimensional array with length of 0 element
     if(haystack.length===0){
         return -1
+    }
+
+    if(haystack[0].constructor===Array){
+        
     }
 
 }
