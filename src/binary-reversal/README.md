@@ -8,6 +8,7 @@ For example: if the parameter is `"47"` then the binary version of this integer 
 
 Your program should reverse this binary string which then becomes: `11110100` and then finally return the decimal version of this string, which is `244`.
 
+4, 16, 32 , 64, 128
 ### Examples
 
 ```
