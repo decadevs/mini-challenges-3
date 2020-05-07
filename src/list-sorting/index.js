@@ -15,10 +15,7 @@ function listSorting(needle, haystack) {
       }
     })
 
-    if (row == 0 && column == 0 && match == false){
-        return -1
-    }
-    return [row, column]
+    return !match ? -1 : [row, column]
 }
 
 module.exports = listSorting;
