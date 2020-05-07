@@ -12,24 +12,22 @@
  * use parseInt to convert the reverse bits to Integer base 10
  */
 function binaryReversal(value) {
-    let valueNum=Number(value)
-    let binaryValue=valueNum.toString(2)
-    let paddedBinaryValue=binaryValue.padStart(8,0)
-    
-    let i=paddedBinaryValue.length
-    let reversedBinaryValue=""
-    while(i>=0){
-        reversedBinaryValue+=paddedBinaryValue[i]
-        i-=1
-    }
+  let valueNum = Number(value);
+  let binaryValue = valueNum.toString(2);
+  let paddedBinaryValue = binaryValue.padStart(8, 0);
 
-    let reverseBinaryOnlyZeroOne=reversedBinaryValue.match(/[01]+/)[0]
-    
-    let integerOfReversedBinaryZeroOne=parseInt(reverseBinaryOnlyZeroOne,2)
+  let i = paddedBinaryValue.length;
+  let reversedBinaryValue = "";
+  while (i >= 0) {
+    reversedBinaryValue += paddedBinaryValue[i];
+    i -= 1;
+  }
 
-    return String(integerOfReversedBinaryZeroOne)
-    
+  let reverseBinaryOnlyZeroOne = reversedBinaryValue.match(/[01]+/)[0];
+
+  let integerOfReversedBinaryZeroOne = parseInt(reverseBinaryOnlyZeroOne, 2);
+
+  return String(integerOfReversedBinaryZeroOne);
 }
-
 
 module.exports = binaryReversal;
