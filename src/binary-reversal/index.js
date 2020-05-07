@@ -55,7 +55,7 @@ function binaryReversal(value)
                 power--;
             }
 
-            return valueReversed;        
+            return `${valueReversed}`;        
         }
     }
 }
