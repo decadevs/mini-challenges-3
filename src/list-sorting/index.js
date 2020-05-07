@@ -11,6 +11,9 @@
 */
 
 function listSorting(needle, haystack) {
+    if(haystack.length===0){
+        return -1
+    }
 
 }
 
