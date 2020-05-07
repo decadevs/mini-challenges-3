@@ -31,9 +31,18 @@ function listSorting(needle, haystack) {
             return -1
         }
     }
+    else{
+        for(let i=0;i<haystack.length;i++){
+            if(haystack[i]===needle){
+                positionFound=i
+            }
+        }
+        if(positionFound===""){
+            return -1
+        }
+    }
 
-    
-
+    return positionFound
 }
 
 module.exports = listSorting;
