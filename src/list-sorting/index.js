@@ -9,7 +9,7 @@ function listSorting(needle, haystack) {
 
     for(let i = 0; i < haystack.length; i++){
 
-      if(haystack[i].length === 0){return -1}
+      if(haystack[i].length === 0){result = -1;}
 
       if(haystack[i].includes(needle)){
         result = [i, haystack[i].lastIndexOf(needle)];
@@ -23,7 +23,6 @@ function listSorting(needle, haystack) {
   }
 
   return haystack.lastIndexOf(needle);
-
 
 }
 
