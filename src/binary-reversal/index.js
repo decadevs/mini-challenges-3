@@ -21,7 +21,7 @@ function binaryReversal(value) {
   binary = binary.join("");
   let decimal = parseInt(binary,2);
   decimal= decimal.toString();
-    return decimal;
-
+  return decimal;
 }
 module.exports = binaryReversal;
+
