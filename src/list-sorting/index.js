@@ -1,6 +1,6 @@
 function listSorting(needle, haystack) {
     //debugger
-    let needleIndex;
+    let needleIndex = -1;
     let arrayIndex;
 
     for (let val of haystack) {
@@ -21,9 +21,9 @@ function listSorting(needle, haystack) {
     }
       
     if (arrayIndex) {
-        return `[${arrayIndex}, ${needleIndex}]`;
+        return [arrayIndex, needleIndex];
     }
-    return needleIndex + "";
+    return needleIndex ;
 
 }
 
