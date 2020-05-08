@@ -1,3 +1,5 @@
-function listSorting(needle, haystack) {}
+function listSorting(needle, haystack) {
+    let arr = [];
+}
 
 module.exports = listSorting;
