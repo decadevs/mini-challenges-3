@@ -1,8 +1,7 @@
 function listSorting(needle, haystack) {
-  let json = haystack;
   let row = haystack.length - 1;
-  // check if  array is flat
-  if (JSON.stringify(json)[1] !== "[") {
+  // for flat haystack array
+  if (typeof haystack[0] !== "object") {
     return haystack.lastIndexOf(needle);
   }
   //multidimension array
