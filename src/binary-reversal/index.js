@@ -4,6 +4,7 @@
  *  * @param {string} value
  */
 function binaryReversal(value) {
+  
   let numValue = Number(value);
 // convert to binary
   let binaryValue = numValue.toString(2);
@@ -14,6 +15,7 @@ function binaryReversal(value) {
 //convert reversed value to decimal
   let decimalvalue = parseInt(reversedValueArray.join(''), 2);
   return decimalvalue;
+
 }
 
 
