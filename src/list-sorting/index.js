@@ -3,7 +3,6 @@ function listSorting(needle, haystack) {
     let lastIndex;
 
 
-
     if (haystack[0] == undefined) {
 
         lastIndex = -1;
