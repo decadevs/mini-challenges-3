@@ -1,7 +1,7 @@
 function listSorting(needle, haystack) {
     const arrayLength =  haystack.length;
-    // if the array is not a nested array
-    for (let x= arrayLength-1; x>=0; x++){
+    for (let x= arrayLength-1; x>=0; x--){
+        // if the current element is not an array
         if(haystack[x] == needle) return x;
 
         // if the current element is an array
