@@ -17,4 +17,5 @@ const binaryReversal = value => {
   return String(Number.parseInt(convertToBinary, 2));
 }
 
+
 module.exports = binaryReversal;
