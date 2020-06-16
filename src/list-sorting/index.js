@@ -2,6 +2,7 @@ function listSorting(needle, haystack) {
     if (haystack.length ==0  ){
         return -1;
     }
+  //looking up for single dimension array.
     if(haystack[0].length == undefined){
         if(haystack.includes(needle)){
             return haystack.lastIndexOf(needle)
@@ -9,20 +10,21 @@ function listSorting(needle, haystack) {
             return -1;
         }
     }
-    let output,
+  // handles haystack, if it is a multidimentional array
+    let lastIndexOfLastOccuranceOfNeedle,
     checkNeedle =0;
-    haystack.forEach((n,i)=>{
-        if(n.includes(needle)){
-            output = [i,n.lastIndexOf(needle)]
+    haystack.forEach((row,rowIndex)=>{
+        if(row.includes(needle)){
+            lastIndexOfLastOccuranceOfNeedle = [rowIndex,row.lastIndexOf(needle)]
         }else{
             checkNeedle +=1
         }
     })
+  //making sure that all the individual arrays that make up the haystack was checked for needle.
     if(haystack.length==checkNeedle){
         return -1;
     }
-    return output;
+    return lastIndexOfLastOccuranceOfNeedle;
 }
-//console.log(listSorting(2, [[6,98,0,2,2],[0,9,8,5,2,3,2]]));
 
 module.exports = listSorting;
