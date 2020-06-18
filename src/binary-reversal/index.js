@@ -4,20 +4,17 @@
  *  * @param {string} value
  */
 function binaryReversal(value) {
+    let padded = ""
 
-    let numberValue = parseInt(value).toString(2);
-    let numberValueReversed = "";
+    let binaryValue = parseInt(value).toString(2);
 
-    while (numberValue.length < 8) {
-        numberValue = "0" + numberValue;
+    if (binaryValue.length < 8) {
+        padded = binaryValue.padStart(8, "0")
     }
 
-    for (let i = numberValue.length - 1; i >= 0; i--) {
-        numberValueReversed += numberValue[i]
-    }
+    let reversed = (padded || binaryValue).split('').reverse().join("");
 
-    return parseInt(numberValueReversed, 2).toString();
-
+    return parseInt(reversed, 2).toString();
 
 }
 

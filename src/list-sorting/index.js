@@ -1,19 +1,14 @@
 function listSorting(needle, haystack) {
 
-    let index = [];
-    for (let i = haystack.length - 1; i >= 0; i--) {
-        if (Array.isArray(haystack[i])) {
-            for (let j = haystack[i].length; j >= 0; j--) {
-                if (haystack[i][j] == needle) {
-                    index.push(i, j);
-                    return index;
-                }
-            }
-        } else {
-            for (let i = haystack.length - 1; i >= 0; i--) {
-                if (haystack[i] === needle) return i;
-            }
+    if (typeof haystack[0] != "object") {
+        return haystack.lastIndexOf(needle);
+    }
 
+    for (let i = haystack.length - 1; i >= 0; i--) {
+        let index = haystack[i];
+
+        if (index.lastIndexOf(needle) > -1) {
+            return [i, index.lastIndexOf(needle)];
         }
     }
 
