@@ -5,16 +5,9 @@
  */
 function binaryReversal(value) {
   let binaryValue = parseInt(value).toString(2);
+  let binaryArray = binaryValue.padStart(8,0).split("")
 
-  const binaryArray = binaryValue.split("");
-
-  while (binaryArray.length % 8 !== 0) {
-    binaryArray.unshift(0);
-  }
-
-  binaryArray.reverse();
-
-  const newString = binaryArray.join("");
+  const newString = binaryArray.reverse().join("");
 
   const newValue = parseInt(newString, 2).toString();
 
