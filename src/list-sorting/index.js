@@ -26,7 +26,4 @@ function listSorting(needle, haystack) {
   return ans
 }
 
-console.log(listSorting(0, [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])); //.toEqual([4, 1]);
-
-
 module.exports = listSorting;
