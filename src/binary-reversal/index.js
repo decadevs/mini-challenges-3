@@ -31,7 +31,7 @@ function binaryReversal(value) {
   }
 
   for (let i = 0; i < newArr.length; i++) {
-  	decimalNumber+=(newArr[i]*Math.pow(2,multipliers[i]));
+  	decimalNumber= decimalNumber + (newArr[i]*Math.pow(2,multipliers[i]));
   }
 
   return decimalNumber+"";
