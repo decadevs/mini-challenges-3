@@ -4,35 +4,16 @@
  *  * @param {string} value
  */
 function binaryReversal(value) {
-  let binary = parseInt(value).toString(2);
-  let binaryString = binary.toString();
-  let binaryArray = binaryString.split('');
-  
-  let remainder = binary.length % 8;
-  let zerosToBeAdded
-  if (remainder !== 0) {
-    zerosToBeAdded = 8 - remainder;
-  }
-  else {
-    zerosToBeAdded = 0;
-  }
-
-  let zeroArray = [];
-  for (let i = 0; i < zerosToBeAdded; i++) {
-    zeroArray.push('0');
-  }
-
-  binaryPadding = [...zeroArray,...binaryArray];
-  let reversePadding = binaryPadding.reverse();
-
-  let reverseBinary = '';
-  for (let j = 0; j < reversePadding.length; j++) {
-    reverseBinary += reversePadding[j];
-  }
-
-  let  decBinDec = parseInt(reverseBinary,2);
-  let ans = decBinDec.toString();
-  return ans;
+  const baseTwo = parseInt(value).toString(2); //Change to number and covert to base 2
+  //Obtain the number of zero to make the digits multiple of 8
+  const requiredLength = Math.ceil(baseTwo.length / 8);
+  const noOfZeros = 8 * requiredLength - baseTwo.length;
+  //Pad the base 2 string with the required zero(s)
+  let paddedTwo = "0".repeat(noOfZeros) + baseTwo;
+  //Reverse the digits of the string
+  let reverseTwo = paddedTwo.split("").reverse().join("");
+  let newValue = parseInt(reverseTwo, 2).toString(); //Convert it back to base 10 string
+  return newValue;
 }
 
 module.exports = binaryReversal;
