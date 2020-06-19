@@ -14,7 +14,7 @@ function binaryReversal(value) {
   }
   let reversedBinary = myBinary.split("").reverse().join("")
   let finalResult = (parseInt(reversedBinary, 2)).toString()
-  return finalResult﻿
+  return finalResult
 }
 
 module.exports = binaryReversal;
