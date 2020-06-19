@@ -1,8 +1,25 @@
 function listSorting(needle, haystack) {
-  let result = haystack.lastIndexOf(needle)
+  let result
+
+  let spreadArray = [].concat(...haystack)
+  if(spreadArray.indexOf(needle) === -1){
+    result = -1
+  }
+  else if(haystack[0].constructor !== Array) {
+    result = haystack.lastIndexOf(needle)
+    // return result
+  }
+  else{
+    for(let i = 0; i < haystack.length; i++) {
+      for(let j = 0; j < haystack[i].length; j++) {
+        if(haystack[i][j] === needle) {
+          result = [i, j]
+          // return result
+        }
+      }
+    }
+  }
   return result
 }
-
-console.log(listSorting(4, [1,1,2,2,3,3,4,5,6,4,2,3,4,3]))
 
 module.exports = listSorting;
