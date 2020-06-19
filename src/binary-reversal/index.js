@@ -9,13 +9,13 @@ function binaryReversal(value) {
   if (reversedBinaryArray.length % 8 === 0) {
     const REVERSED_BINARY_STRING = reversedBinaryArray.join("");
     return parseInt(REVERSED_BINARY_STRING, 2).toString();
-  } else {
-    for (let i = 0; i < reversedBinaryArray.length % 8; ++i) {
-      reversedBinaryArray.push("0");
-    }
-    const REVERSED_BINARY_STRING = reversedBinaryArray.join("");
-    return parseInt(REVERSED_BINARY_STRING, 2).toString();
   }
+for (let i = 0; i < reversedBinaryArray.length % 8; ++i) {
+    reversedBinaryArray.push("0");
+}
+const REVERSED_BINARY_STRING = reversedBinaryArray.join("");
+return parseInt(REVERSED_BINARY_STRING, 2).toString();
+
 }
 
 module.exports = binaryReversal;

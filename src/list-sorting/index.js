@@ -1,5 +1,5 @@
 function listSorting(needle, haystack) {
-  if (typeof haystack[0] === "number") {
+  if (typeof haystack[0] !== "object") {
     return haystack.lastIndexOf(needle);
   }
   for (let i = haystack.length - 1; i >= 0; --i) {
