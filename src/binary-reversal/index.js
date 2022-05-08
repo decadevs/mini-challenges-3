@@ -27,6 +27,7 @@ function binaryReversal(value) {
     for (let i = 0; i < valueString.length; i++){
         binaryString2 = (binaryString2 * 2) + Number(valueString[i]);
     }
+    binaryReversal2 = binaryString2 + "";
    
     return binaryString2;
 }
