@@ -5,20 +5,19 @@
  */
 function binaryReversal(value)
 {
-    let temp = parseInt(value);
-    temp = temp.toString(2);    //binary representation
-    temp = temp.split('');
+    let num = parseInt(value);
+    let binaryStr = num.toString(2);
+    let bitArr = binaryStr.split('');
 
-    //pad bits if not complete bytes
-    if (temp.length % 8 !== 0)
+    if (bitArr.length % 8 !== 0)
     {
-        let missingBits = 8 - (temp.length % 8);
+        let missingBits = 8 - (bitArr.length % 8);
         let leadingZeros = new Array(missingBits).fill('0');
-        temp = leadingZeros.concat(temp);
+        bitArr = leadingZeros.concat(bitArr);
     }
 
-    temp = temp.reverse().join('');
-    return String(parseInt(temp, 2)); //get the result in decimal and cast to string
+    let reversed = bitArr.reverse().join('');
+    return String(parseInt(reversed, 2));
 }
 
 module.exports = binaryReversal;
