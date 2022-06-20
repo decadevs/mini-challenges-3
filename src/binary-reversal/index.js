@@ -5,19 +5,17 @@
  */
 function binaryReversal(value)
 {
-    let num = parseInt(value);
-    let binaryStr = num.toString(2);
-    let bitArr = binaryStr.split('');
+  const num = parseInt(value);
+  let binaryStr = num.toString(2);
 
-    if (bitArr.length % 8 !== 0)
-    {
-        let missingBits = 8 - (bitArr.length % 8);
-        let leadingZeros = new Array(missingBits).fill('0');
-        bitArr = leadingZeros.concat(bitArr);
-    }
+  if (binaryStr.length % 8 !== 0)
+  {
+    const fullLength = 8 - (binaryStr.length % 8) + binaryStr.length;
+    binaryStr = binaryStr.padStart(fullLength, '0');
+  }
 
-    let reversed = bitArr.reverse().join('');
-    return String(parseInt(reversed, 2));
+  const reversed = binaryStr.split('').reverse().join('');
+  return String(parseInt(reversed, 2));
 }
 
 module.exports = binaryReversal;
