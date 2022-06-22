@@ -1,4 +1,4 @@
-const binaryReversal = require(".");
+const binaryReversal = require("./index.js");
 
 describe("Binary Reversal Spec", () => {
   test("It passes the basics", () => {
