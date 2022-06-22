@@ -1,4 +1,4 @@
-const listSorting = require(".");
+const listSorting = require("./index");
 
 describe("Roman to Numerals solution", () => {
   test("1 indexed", () => {
