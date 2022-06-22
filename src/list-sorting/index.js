@@ -13,7 +13,7 @@ function listSorting(needle, haystack) {
             
             //multidimentional array
             haystack.forEach((r, r_index) => {
-                // console.log(r.lastIndexOf(r_index))
+               
                 r.forEach((c, c_index) => {
                     if (c === needle) {
                         index = [r_index, c_index]
@@ -31,13 +31,5 @@ function listSorting(needle, haystack) {
         }
 }
 
-console.log(listSorting(1,
-    [
-        [2],
-        [2000, 200, 20000],
-        [200, 20],
-        [200, 200, 200, 200, 200, 200, 200, 200, 200, 200],
-        [200, 200, 200, 200, 200],
-        [200, 200, 200, 200, 200, 200],
-      ]))
+
 module.exports = listSorting;
