@@ -10,7 +10,6 @@ function listSorting(needle, haystack) {
                 r.forEach((c, c_index) => {
                     if (c === needle) {
                         console.log(c_index);
-                    //    let column =  r[r_index].lastIndexOf(c_index)
                         index = [r_index, c_index]
                     } 
                 })
@@ -18,19 +17,7 @@ function listSorting(needle, haystack) {
             return index
         }
     }
-   
  return index
 }
 
-console.log(listSorting(50, [
-        [1, 2],
-        [1],
-        [10],
-        [1, 2],
-        [1, 2, 3, 4, 5],
-        [1, 2, 3, 4],
-        [1, 2, 3, 4, 5, 6, 7],
-        [1, 2, 3, 4, 5, 6],
-        [0],
-      ]))
 module.exports = listSorting;
