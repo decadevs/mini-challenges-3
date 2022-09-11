@@ -5,6 +5,7 @@
  */
 function binaryReversal(value) {
     //convert to binary
+    
     let bin= (parseInt(value).toString(2));
     //create a string of 0* padding length
     let pad= ("0".repeat(8- bin.length));
