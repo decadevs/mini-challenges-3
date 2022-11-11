@@ -1,13 +1,15 @@
-const binaryReversal = require(".");
+function binaryReversal (str) {
+    // code goes here  
+    let num = parseInt(str);
+    let binary = num.toString(2);
+    let reverse = binary.split("").reverse().join("");
+    let newNum = parseInt(reverse, 2);
+    let final = newNum.toString(10);
+    return final;
+  }
 
-describe("Binary Reversal Spec", () => {
-  test("It passes the basics", () => {
-    expect(binaryReversal("1")).toBe("128");
-    expect(binaryReversal("10")).toBe("80");
-    expect(binaryReversal("45")).toBe("180");
-    expect(binaryReversal("100")).toBe("38");
-    expect(binaryReversal("111")).toBe("246");
-    expect(binaryReversal("121")).toBe("158");
-    expect(binaryReversal("200")).toBe("19");
-  });
-});
+    console.log(binaryReversal("47"));
+    console.log(binaryReversal("213"));
+    console.log(binaryReversal("4567"));
+
+    module.exports = binaryReversal;
