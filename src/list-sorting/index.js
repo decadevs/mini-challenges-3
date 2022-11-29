@@ -1,6 +1,6 @@
 function listSorting(needle, haystack) {
     var arr = haystack;
-    var index = 0;
+    var index = '';
     var answer = [];//level, indexOf
     var holder = '';
 
@@ -49,3 +49,4 @@ function listSorting(needle, haystack) {
 }
 
 module.exports = listSorting;
+
