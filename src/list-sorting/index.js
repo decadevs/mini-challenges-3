@@ -1,6 +1,6 @@
 function listSorting(needle, haystack) {
     var arr = haystack;
-    var index = "";
+    var index = 0;
     var answer = [];//level, indexOf
     var holder = '';
 
@@ -41,7 +41,7 @@ function listSorting(needle, haystack) {
         return -1;
     }else{
         if (answer.length == 1) {
-            return answer.join('');
+            return Number(answer.join(''));
         }else{
             return answer;
         }

@@ -9,17 +9,15 @@
 
     var binArray = valueInBinary.split('');
     var num = valueInBinary.length
-    console.log(binArray)
     if (binArray.length < 8) {
         for (let i = 0; i < (8 - num); i++) {
             binArray.unshift('0');
             
         }
     }
-    console.log(binArray)
     var reversal = binArray.reverse();
     
-    return parseInt(reversal.join(''),2);
+    return parseInt(reversal.join(''),2).toString();
 }
 
 module.exports = binaryReversal;
