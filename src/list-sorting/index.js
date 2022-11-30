@@ -1,5 +1,5 @@
 function listSorting(needle, haystack) {
-  
+
     if (haystack.length == 0) return -1;
     let arr = [];
 
@@ -12,6 +12,7 @@ function listSorting(needle, haystack) {
         }
       }
       if (arr.every((el) => el == null)) return -1;
+      
 
       let arr2 = [];
 
